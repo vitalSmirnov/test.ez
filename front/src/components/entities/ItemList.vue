@@ -1,19 +1,33 @@
 <template>
   <div>
     <q-card-section>
-      <q-separator dark inset/>
+      <q-separator
+        dark
+        inset
+      />
       <div v-if="store.fetching">
         <q-spinner size="20px" />
         Loading items...
       </div>
-      <q-banner v-else-if="store.error" dense class="item-list__error">
+      <q-banner
+        v-else-if="store.error"
+        dense
+        class="item-list__error"
+      >
         {{ store.error }}
       </q-banner>
-      <q-list v-else dense class="item-list">
+      <q-list
+        v-else
+        dense
+        class="item-list"
+      >
         <q-item v-if="items.length === 0">
           <q-item-section>No items yet.</q-item-section>
         </q-item>
-        <q-item v-for="item in items" :key="item.id" >
+        <q-item
+          v-for="item in items"
+          :key="item.id"
+        >
           <ItemCard :item="item" />
         </q-item>
       </q-list>
@@ -28,7 +42,6 @@
     </q-card-section>
   </div>
 </template>
-
 
 <script setup lang="ts">
 import { computed, onMounted, ref } from "vue"
@@ -63,8 +76,6 @@ const goNext = () => {
 onMounted(() => {
   void loadPage(page.value)
 })
-
-
 </script>
 
 <style scoped lang="scss">

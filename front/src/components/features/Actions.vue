@@ -1,5 +1,8 @@
 <template>
-  <q-item-section side class="actions">
+  <q-item-section
+    side
+    class="actions"
+  >
     <q-btn
       v-if="mode === 'edit'"
       color="primary"

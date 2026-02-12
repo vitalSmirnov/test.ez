@@ -5,10 +5,7 @@ type ItemsResponse = {
   items: Item[]
 }
 
-export async function fetchItems(params?: {
-  skip?: number
-  limit?: number
-}): Promise<ItemsResponse> {
+export async function fetchItems(params?: { skip?: number; limit?: number }): Promise<ItemsResponse> {
   const query = new URLSearchParams()
 
   if (params?.skip !== undefined) {

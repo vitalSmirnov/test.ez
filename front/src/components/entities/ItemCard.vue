@@ -14,7 +14,11 @@
           placeholder="Item text"
         />
         <div class="card-meta">{{ new Date(item.created_at).toLocaleString() }}</div>
-        <q-banner v-if="localError" dense class="card-error">
+        <q-banner
+          v-if="localError"
+          dense
+          class="card-error"
+        >
           {{ localError }}
         </q-banner>
       </div>
@@ -35,8 +39,8 @@
 
 <script setup lang="ts">
 import { ref } from "vue"
-import { useItemsStore, type Item } from "../../stores/items";
-import Actions from "../features/Actions.vue";
+import { useItemsStore, type Item } from "../../stores/items"
+import Actions from "../features/Actions.vue"
 
 const props = defineProps<{
   item: Item

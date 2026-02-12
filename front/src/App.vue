@@ -12,6 +12,6 @@
 </template>
 
 <script setup lang="ts">
-  import ItemList from "./components/entities/ItemList.vue"
-  import ItemForm from "./components/features/ItemForm.vue";
+import ItemList from "./components/entities/ItemList.vue"
+import ItemForm from "./components/features/ItemForm.vue"
 </script>

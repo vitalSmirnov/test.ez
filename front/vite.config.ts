@@ -13,11 +13,10 @@ export default defineConfig({
       sassVariables: fileURLToPath(new URL("./src/quasar-variables.sass", import.meta.url)),
     }),
   ],
-    server: {
+  server: {
     proxy: {
       "/api": "http://localhost:3000",
       "/media": "http://localhost:3000",
     },
   },
-},
-)
+})

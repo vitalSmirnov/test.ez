@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <q-form @submit.prevent="submit">
       <q-input
         v-model="text"
@@ -22,7 +21,10 @@
         </q-btn>
       </div>
 
-      <q-banner v-if="error"  dense>
+      <q-banner
+        v-if="error"
+        dense
+      >
         {{ error }}
       </q-banner>
     </q-form>
