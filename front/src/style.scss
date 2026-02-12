@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap");
+
+#root {
+  --app-bg: #f6f4f0;
+  --app-surface: #ffffff;
+  --app-text: #1c1b1a;
+  --app-muted: #6b6f76;
+  --app-accent: #d64b2a;
+  --app-border: #e5ded6;
+  --app-radius: var(--module) * 2;
+  --module: 8px;
+
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--app-text);
+  background-color: var(--app-bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+@mixin container {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--app-surface);
+  border: 1px solid var(--app-border);
+  border-radius: var(--app-radius);
+}
+.header-item {
+  padding: 2rem;
+}
+section {
+  padding: 2rem;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100dvh;
+}
+
+#app{
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.app {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+
+@media (max-width: 720px) {
+  #app {
+    padding: 1rem;
+  }
+  section {
+    padding: 1rem;
+  }
+}
